@@ -28,7 +28,7 @@ const Navbar = () => {
     ]
 
     return (
-        <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black font-sans fixed">
+        <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black font-sans fixed z-50">
             <div>
                 <h1 className="text-5xl font-signature ml-2">Jakub</h1>
             </div>
