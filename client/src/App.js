@@ -9,7 +9,7 @@ import SocialLinks from "./components/SocialLinks";
 
 function App() {
   return (
-    <div className="font-signature">
+    <div>
       <Navbar/>
       <Home/>
       <About/>
