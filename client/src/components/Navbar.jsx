@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
@@ -7,48 +8,58 @@ const Navbar = () => {
     const links = [
         {
             id: 1,
-            link: 'home'
+            link: "home"
         },
         {
             id: 2,
-            link: 'about'
+            link: "about"
         },
         {
             id: 3,
-            link: 'portfolio'
+            link: "portfolio"
         },
         {
             id: 4,
-            link: 'experience'
+            link: "experience"
         },
         {
             id: 5,
-            link: 'contact'
+            link: "contact"
         },
     ]
 
     return (
         <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black font-sans fixed z-50">
             <div>
-                <h1 className="text-5xl font-signature ml-2">Jakub</h1>
+                <Link activeClass="active" to="home" spy={true} smooth={true} duration={500}>
+                    <h1 className="text-5xl font-signature ml-2 text-yellow-400 cursor-pointer">
+                        Jakub
+                    </h1>
+                </Link>
             </div>
             <ul className="hidden md:flex">
                 {links.map(({ id, link }) => (
                     <li
                         key={id}
-                        className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+                        className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200 hover:text-yellow-400"
                     >
-                        {link}
+                        <Link activeClass="active" to={link} spy={true} smooth={true} duration={500}>
+                            {link}
+                        </Link>
                     </li>
                 ))}
             </ul>
             <div onClick={() => setNav(!nav)} className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden">
                 {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
             </div>
-           {nav && ( <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen 
+            {nav && (<ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen 
                 bg-gradient-to-b from-black to-gray-800 text-gray-500">
                 {links.map(({ id, link }) => (
-                    <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">{link}</li>
+                    <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">
+                        <Link onClick={() => setNav(!nav)} activeClass="active" to={link} spy={true} smooth={true} duration={500}>
+                            {link}
+                        </Link>
+                    </li>
                 ))}
             </ul>)}
         </div>

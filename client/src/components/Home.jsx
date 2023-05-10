@@ -4,6 +4,7 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { Link } from 'react-scroll'
 
 const Home = () => {
     const [text] = useTypewriter({
@@ -18,11 +19,11 @@ const Home = () => {
     },[]);
 
     return (
-        <div name="home" className="font-sans h-screen w-full bg-gradient-to-b from-black via-black to-gray-800">
+        <div id="home" className="font-sans h-screen w-full bg-gradient-to-b from-black via-black to-gray-800">
             <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
                 <div className="flex flex-col justify-center h-full">
                     <h2 className="text-4xl sm:text-7xl font-bold text-white">
-                        Hi, I'm  <span>{text}</span> <Cursor />
+                        Hi, I'm <span className="text-yellow-400">{text}</span> <Cursor />
                     </h2>
                     <p className="text-gray-500 py-4 w-2/3">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -35,12 +36,18 @@ const Home = () => {
                         versions of Lorem Ipsum.
                     </p>
                     <div>
-                        <button className="group text-white cursor-pointer w-fit px-6 py-4 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500">
+                        <Link 
+                        activeClass="active" 
+                        to="portfolio" 
+                        spy={true} 
+                        smooth={true} 
+                        duration={500}
+                        className="group text-white cursor-pointer w-fit px-6 py-4 my-2 flex items-center rounded-md bg-gradient-to-r from-yellow-400 to-yellow-500">
                             Portfolio
                             <span className="group-hover:rotate-90 duration-300">
                                 <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
                             </span>
-                        </button>
+                        </Link>
                     </div>
                 </div>
                 <div>
