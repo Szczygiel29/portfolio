@@ -33,7 +33,7 @@ const Navbar = () => {
             <div>
                 <Link activeClass="active" to="home" spy={true} smooth={true} duration={500}>
                     <h1 className="text-5xl font-signature ml-2 text-yellow-400 cursor-pointer">
-                        Jakub
+                        Jakub 12
                     </h1>
                 </Link>
             </div>
