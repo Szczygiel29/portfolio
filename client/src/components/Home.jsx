@@ -19,16 +19,16 @@ const Home = () => {
     },[]);
 
     return (
-        <div id="home" className="font-sans h-screen w-full bg-gradient-to-b from-black via-black to-gray-800">
+        <div id="home" className="font-sans min-h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 pt-40">
             <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
                 <div className="flex flex-col justify-center h-full">
                     <h2 className="text-4xl sm:text-7xl font-bold text-white">
-                        Hi, I'm <span className="text-yellow-400">{text}</span> <Cursor />
+                        Hi, I'm 
+                        <span className="text-yellow-400"> {text}</span><Cursor />
                     </h2>
-                    <p className="text-gray-500 py-4 w-2/3">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type
+                    <p className="text-gray-500 py-4 w-3/3">
+                    Hi there! I'm Jakub Szczygiel and I specialize in creating complete web solutions as a Full Stack Developer. 
+                    Feel free to check out my projects that showcase my skills in both front-end and back-end development.
                     </p>
                     <div>
                         <Link 
@@ -46,7 +46,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div>
-                    <img src={ja} alt="My profile" className="rounded-3xl mx-auto w-2/3 md:w-full" data-aos="fade-left"/>
+                    <img src={ja} alt="My profile" className="rounded-3xl mx-auto object-contain md:w-2/4" data-aos="fade-left"/>
                 </div>
             </div>
         </div>

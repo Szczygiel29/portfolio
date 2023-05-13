@@ -10,7 +10,7 @@ const About = () => {
     return (
         <div
             name="about"
-            className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
+            className="w-full min-h-screen flex-grow bg-gradient-to-b from-gray-800 to-black text-white"
         >
             <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
                 <div className="pb-8">
@@ -19,24 +19,20 @@ const About = () => {
                     </p>
                 </div>
 
-                <p className="text-xl mt-20 " data-aos="fade-left">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
-                    deserunt illum mollitia officiis qui exercitationem perferendis neque
-                    quasi a recusandae necessitatibus tempora iusto! Blanditiis error
-                    iste, totam fugiat recusandae rerum laborum perferendis molestiae
-                    aperiam asperiores nemo. Magni dolor maxime debitis vitae, eaque hic
-                    ab mollitia voluptatibus, a nostrum eveniet laborum!
+                <p className="text-xl mt-20 overflow-x-hidden" data-aos="fade-left">
+                    I am an experienced Full Stack Developer with a degree in Petroleum and Gas Engineering from AGH University of 
+                    Science and Technology. I work on my own programming projects and have expertise in both front-end and back-end 
+                    development. I am constantly improving my skills to provide the latest and most innovative solutions.
                 </p>
 
                 <br />
 
-                <p className="text-xl" data-aos="fade-right">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                    pariatur, vel similique sint, nobis aspernatur ut praesentium
-                    explicabo ipsam aliquid quasi laboriosam et culpa possimus repudiandae
-                    quisquam ullam maiores ab unde. Fugiat odio mollitia nemo alias.
-                    Commodi facilis atque nulla vero voluptatem explicabo. Quibusdam,
-                    magni quo! Eum cupiditate debitis labore.
+                <p className="text-xl overflow-x-hidden" data-aos="fade-right">
+                    I am someone who is always open to acquiring new knowledge and experiences, which is why 
+                    I am constantly developing my programming skills. I am very hardworking and committed to my projects,
+                    and my passion for learning and acquiring new skills allows me to quickly assimilate knowledge and 
+                    grow in various fields. Therefore, I am confident that I will be able to provide you with high-quality 
+                    programming solutions.
                 </p>
             </div>
         </div>

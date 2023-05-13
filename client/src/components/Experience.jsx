@@ -6,6 +6,9 @@ import javascript from '../assets/javascript.png'
 import node from '../assets/node.png'
 import tailwind from '../assets/tailwind.png'
 import react from '../assets/react.png'
+import express from '../assets/express.png'
+import java from '../assets/java.PNG'
+import sass from '../assets/sass.png'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -13,17 +16,18 @@ import 'aos/dist/aos.css'
 const Experience = () => {
 
     const techs = [
+
         {
             id: 1,
-            src: html,
-            title: "HTML",
-            style: "shadow-orange-500"
+            src: node,
+            title: "node",
+            style: "shadow-green-500"
         },
         {
             id: 2,
-            src: css,
-            title: "CSS",
-            style: "shadow-blue-400"
+            src: java,
+            title: "java",
+            style: "shadow-orange-400"
         },
         {
             id: 3,
@@ -39,18 +43,36 @@ const Experience = () => {
         },
         {
             id: 5,
+            src: express,
+            title: "express",
+            style: "shadow-green-500"
+        },
+        {
+            id: 6,
+            src: html,
+            title: "HTML",
+            style: "shadow-orange-500"
+        },
+        {
+            id: 7,
+            src: css,
+            title: "CSS",
+            style: "shadow-blue-400"
+        },
+        {
+            id: 8,
             src: tailwind,
             title: "Tailwind",
             style: "shadow-sky-400"
         },
         {
-            id: 6,
-            src: node,
-            title: "node",
-            style: "shadow-green-500"
+            id: 9,
+            src: sass,
+            title: "Sass",
+            style: "shadow-pink-400"
         },
         {
-            id: 7,
+            id: 10,
             src: github,
             title: "GitHub",
             style: "shadow-gray-400"
@@ -58,11 +80,11 @@ const Experience = () => {
     ];
 
     useEffect(() => {
-        AOS.init({duration: 2000, disable: 'mobile'})
-    },[]);
+        AOS.init({ duration: 2000, disable: 'mobile' })
+    }, []);
 
     return (
-        <div id="experience" className="font-sans bg-gradient-to-b from-gray-800 to-black  text-white w-full h-screen">
+        <div id="experience" className="font-sans min-h-screen bg-gradient-to-b from-gray-800 to-black  text-white w-full">
             <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
                 <div className="pb-8">
                     <p className="text-4xl font-bold inline border-b-4 border-gray-500">Experience</p>
