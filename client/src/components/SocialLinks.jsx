@@ -40,7 +40,7 @@ const SocialLinks = () => {
                     Resume <BsFillFilePersonFill size={30} />
                 </>
             ),
-            href: "/Jakub_Szczygiel_CV.pdf",
+            href: "/CV_JAKUB_SZCZYGIEL.pdf",
             style: 'rounded-br-md',
             download: true,
         },
